@@ -41,11 +41,11 @@ cep --file ceps.txt -o json
  cep.sh v2.0.0 | Brazilian CEP Lookup | 2026-11-21T02:44:20Z
 =====================================================================
 
-[OK] CEP          : 01001-000 (provider: opencep)
-    Logradouro : Praça da Sé
-    Bairro     : Sé
-    Cidade/UF  : São Paulo / SP
-    IBGE       : 3550308
+[OK] CEP         : 01001-000 (provider: opencep)
+     Logradouro  : Praça da Sé
+     Bairro      : Sé
+     Cidade/UF   : São Paulo / SP
+     IBGE        : 3550308
 ```
 
 ## Licença

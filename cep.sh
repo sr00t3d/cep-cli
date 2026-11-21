@@ -261,15 +261,15 @@ EOF
         IFS=$'\x1f' read -r cep st prov street neigh city uf ibge lat lon tz <<<"$row"
         printf '\n'
         if [[ "$st" == "found" ]]; then
-          printf '%s CEP          : %s (provider: %s)\n' "$OK" "$cep" "$prov"
-          printf '    Logradouro : %s\n' "${street:-n/a}"
-          printf '    Bairro     : %s\n' "${neigh:-n/a}"
-          printf '    Cidade/UF  : %s / %s\n' "${city:-?}" "${uf:-?}"
-          [[ -n "$ibge" ]] && printf '    IBGE       : %s\n' "$ibge"
-          [[ -n "$tz" ]]   && printf '    Timezone   : %s\n' "$tz"
+          printf '%s %-11s : %s (provider: %s)\n' "$OK" "CEP" "$cep" "$prov"
+          printf '     %-11s : %s\n' "Logradouro" "${street:-n/a}"
+          printf '     %-11s : %s\n' "Bairro" "${neigh:-n/a}"
+          printf '     %-11s : %s / %s\n' "Cidade/UF" "${city:-?}" "${uf:-?}"
+          [[ -n "$ibge" ]] && printf '     %-11s : %s\n' "IBGE" "$ibge"
+          [[ -n "$tz" ]]   && printf '     %-11s : %s\n' "Timezone" "$tz"
           if [[ -n "$lat" && -n "$lon" ]]; then
-            printf '    Coords     : %s, %s\n' "$lat" "$lon"
-            printf '    Map (OSM)  : https://www.openstreetmap.org/?mlat=%s&mlon=%s#map=15/%s/%s\n' "$lat" "$lon" "$lat" "$lon"
+            printf '     %-11s : %s, %s\n' "Coords" "$lat" "$lon"
+            printf '     %-11s : https://www.openstreetmap.org/?mlat=%s&mlon=%s#map=15/%s/%s\n' "Map (OSM)" "$lat" "$lon" "$lat" "$lon"
           fi
         elif [[ "$st" == "invalid" ]]; then
           printf '%s CEP inválido : %s (esperado 8 dígitos)\n' "$FAIL" "$cep"
