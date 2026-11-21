@@ -36,6 +36,27 @@ cep --provider viacep -o csv 01001000 90250210
 cep --file ceps.txt -o json
 ```
 
+## Direct Execution & Windows PowerShell
+
+### Linux / macOS (Direct Execution)
+```bash
+bash <(curl -fsSL https://raw.githubusercontent.com/sr00t3d/cep-cli/main/cep.sh) 01001-000
+```
+
+### Windows (PowerShell `cep.ps1`)
+Zero external dependencies — works natively on **Windows PowerShell 5.1+** and **PowerShell 7+**:
+
+```powershell
+# Direct execution (no clone required)
+& ([scriptblock]::Create((irm https://raw.githubusercontent.com/sr00t3d/cep-cli/main/cep.ps1))) 01001-000
+
+# Local execution
+.\cep.ps1 01001-000
+.\cep.ps1 -Provider opencep 69042-500
+.\cep.ps1 01001-000 90250-210 -Output csv
+.\cep.ps1 -File ceps.txt -Output json
+```
+
 ## Real Output Example
 
 ### Table Output (`cep.sh --no-color 01001-000`)
@@ -63,14 +84,3 @@ cep,status,provider,street,neighborhood,city,state,ibge,latitude,longitude,timez
 ## License
 
 Licensed under the [Apache License 2.0](LICENSE).
-
-## Windows (PowerShell `cep.ps1`)
-
-Zero external dependencies — works natively on **Windows PowerShell 5.1** and **PowerShell 7+**:
-
-```powershell
-.\cep.ps1 01001-000
-.\cep.ps1 -Provider opencep 69042-500
-.\cep.ps1 01001-000 90250-210 -Output csv
-.\cep.ps1 -File ceps.txt -Output json
-```

@@ -36,6 +36,27 @@ cep --provider viacep -o csv 01001000 90250210
 cep --file ceps.txt -o json
 ```
 
+## Execução Direta & Windows PowerShell
+
+### Linux / macOS (Execução Direta)
+```bash
+bash <(curl -fsSL https://raw.githubusercontent.com/sr00t3d/cep-cli/main/cep.sh) 01001-000
+```
+
+### Windows (PowerShell `cep.ps1`)
+Zero dependências externas — compatível com **Windows PowerShell 5.1+** e **PowerShell 7+**:
+
+```powershell
+# Execução direta (sem clonar)
+& ([scriptblock]::Create((irm https://raw.githubusercontent.com/sr00t3d/cep-cli/main/cep.ps1))) 01001-000
+
+# Execução local
+.\cep.ps1 01001-000
+.\cep.ps1 -Provider opencep 69042-500
+.\cep.ps1 01001-000 90250-210 -Output csv
+.\cep.ps1 -File ceps.txt -Output json
+```
+
 ## Exemplo de Saída Real
 
 ```text
@@ -53,14 +74,3 @@ cep --file ceps.txt -o json
 ## Licença
 
 Licenciado sob a [Apache License 2.0](LICENSE).
-
-## Windows (PowerShell `cep.ps1`)
-
-Zero dependências externas — funciona nativamente no **Windows PowerShell 5.1** e **PowerShell 7+**:
-
-```powershell
-.\cep.ps1 01001-000
-.\cep.ps1 -Provider opencep 69042-500
-.\cep.ps1 01001-000 90250-210 -Output csv
-.\cep.ps1 -File ceps.txt -Output json
-```

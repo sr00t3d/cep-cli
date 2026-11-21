@@ -19,17 +19,27 @@ cep --provider opencep -o json 01001-000
 cep --file ceps.txt -o csv
 ```
 
-## Licencia
+## Ejecución Directa & Windows PowerShell
 
-Licenciado bajo la [Apache License 2.0](LICENSE).
+### Linux / macOS (Ejecución Directa)
+```bash
+bash <(curl -fsSL https://raw.githubusercontent.com/sr00t3d/cep-cli/main/cep.sh) 01001-000
+```
 
-## Windows (PowerShell `cep.ps1`)
-
-Cero dependencias externas — funciona de forma nativa en **Windows PowerShell 5.1** y **PowerShell 7+**:
+### Windows (PowerShell `cep.ps1`)
+Cero dependencias externas — compatible con **Windows PowerShell 5.1+** y **PowerShell 7+**:
 
 ```powershell
+# Ejecución directa (sin clonar)
+& ([scriptblock]::Create((irm https://raw.githubusercontent.com/sr00t3d/cep-cli/main/cep.ps1))) 01001-000
+
+# Ejecución local
 .\cep.ps1 01001-000
 .\cep.ps1 -Provider opencep 69042-500
 .\cep.ps1 01001-000 90250-210 -Output csv
 .\cep.ps1 -File ceps.txt -Output json
 ```
+
+## Licencia
+
+Licenciado bajo la [Apache License 2.0](LICENSE).
