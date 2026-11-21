@@ -4,6 +4,8 @@
 
 [![License](https://img.shields.io/badge/license-Apache--2.0-green.svg)](LICENSE) [![Version](https://img.shields.io/badge/version-2.0.0-blue.svg)](https://github.com/sr00t3d/cep-cli/releases) [![Shell](https://img.shields.io/badge/bash-4.0+-blue.svg)](https://www.gnu.org/software/bash/)
 
+![cep-cli Cover](cep-cli-cover.webp)
+
 `cep.sh` is a lightweight Bash CLI for looking up Brazilian postal codes (CEPs) with an automatic multi-provider HTTPS fallback chain: **BrasilAPI v2** (with coordinates, IBGE & timezone) -> **OpenCEP** -> **ViaCEP**. Supports single and batch lookups (`--file`), strict 8-digit validation, and structured `table`, `json`, and `csv` outputs.
 
 > **Historical Credits:** Refactored from the original 2012 `cep.sh` script by **Percio Andrade (Percio Castelo)** (which originally queried the now-defunct `cep.correiocontrol.com.br` endpoint).

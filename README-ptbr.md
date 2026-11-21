@@ -4,6 +4,8 @@
 
 [![License](https://img.shields.io/badge/license-Apache--2.0-green.svg)](LICENSE) [![Version](https://img.shields.io/badge/version-2.0.0-blue.svg)](https://github.com/sr00t3d/cep-cli/releases) [![Shell](https://img.shields.io/badge/bash-4.0+-blue.svg)](https://www.gnu.org/software/bash/)
 
+![Capa cep-cli](cep-cli-cover.webp)
+
 `cep.sh` é uma CLI leve em Bash para consultar CEPs brasileiros no terminal com cadeia automática de fallback HTTPS entre **BrasilAPI v2** (com coordenadas, IBGE e fuso horário) -> **OpenCEP** -> **ViaCEP**. Suporta consultas individuais ou em lote (`--file`), validação estrita de 8 dígitos e saídas em `table`, `json` e `csv`.
 
 > **Créditos Históricos:** Refatorado do script `cep.sh` original de 2012 de **Percio Andrade (Percio Castelo)** (que consultava o antigo `cep.correiocontrol.com.br`).
