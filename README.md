@@ -63,3 +63,14 @@ cep,status,provider,street,neighborhood,city,state,ibge,latitude,longitude,timez
 ## License
 
 Licensed under the [Apache License 2.0](LICENSE).
+
+## Windows (PowerShell `cep.ps1`)
+
+Zero external dependencies — works natively on **Windows PowerShell 5.1** and **PowerShell 7+**:
+
+```powershell
+.\cep.ps1 01001-000
+.\cep.ps1 -Provider opencep 69042-500
+.\cep.ps1 01001-000 90250-210 -Output csv
+.\cep.ps1 -File ceps.txt -Output json
+```

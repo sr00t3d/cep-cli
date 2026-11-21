@@ -22,3 +22,14 @@ cep --file ceps.txt -o csv
 ## Licencia
 
 Licenciado bajo la [Apache License 2.0](LICENSE).
+
+## Windows (PowerShell `cep.ps1`)
+
+Cero dependencias externas — funciona de forma nativa en **Windows PowerShell 5.1** y **PowerShell 7+**:
+
+```powershell
+.\cep.ps1 01001-000
+.\cep.ps1 -Provider opencep 69042-500
+.\cep.ps1 01001-000 90250-210 -Output csv
+.\cep.ps1 -File ceps.txt -Output json
+```
